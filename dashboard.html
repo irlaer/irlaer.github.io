@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html><head>
+  <meta http-equiv="refresh" content="10">
+  <meta name="mobile-web-app-capable" content="yes">
+<title>Untitled - 465324</title>
+
+<script>
+  function fullscreen()
+  {
+window.scrollTo(0,1);
+console.log('fullscreen');
+
+
+  var body = document.documentElement;
+if (body.requestFullscreen) {
+  body.requestFullscreen();
+} else if (body.webkitrequestFullscreen) {
+  body.webkitrequestFullscreen();
+} else if (body.mozrequestFullscreen) {
+  body.mozrequestFullscreen();
+} else if (body.msrequestFullscreen) {
+  body.msrequestFullscreen();
+}
+
+}
+
+function emulateClick()
+{
+  //console.log('click');
+  //let click = new CustomEvent("click");
+  //assigned = document.getElementById("assigned-ind");
+	//assigned.dispatchEvent(click);
+  //console.log('click2');
+}
+
+//window.onload='emulateClick();'
+
+
+  </script>
+
+  <style>
+body {
+  color: white;
+  margin: 0;
+  padding: 0 0 0 0;
+  font-size:0;
+  text-align: center;
+  font-family: Tahoma;
+}
+
+.left-box {
+width:calc(50% - 2px);
+vertical-align: middle;
+height:50vh;
+display: inline-block;
+}
+
+.right-box {
+  float:right;
+  display:block;
+  height:50vh;
+  width:50%;
+}
+
+.child {
+  border: white 1px solid;
+  height:calc(50vh - 3px);
+  width:calc(50vw - 3px);
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+	}
+
+.label{
+  font-size:calc(100vh/20)
+}
+
+.indicator{
+  font-size:calc(100vh/4)
+}
+
+</style><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script></head>
+  <body>
+      <div id="assigned" class="left-box" style="background-color:green">
+    <div class="child">
+      <div class="label">Assigned</div>
+      <div class="indicator" id="assigned-ind" onclick="fullscreen();">281</div>
+      </div></div>
+  <div id="on-test" class="right-box" style="background-color:green">
+    <div class="child">
+      <div class="label">Test ready</div>
+      <div class="indicator">13</div>
+
+    </div>
+    </div>
+  <div id="on-review" class="left-box" style="background-color:green">
+    <div class="child">
+            <div class="label">For review</div>
+      <div class="indicator">82</div>
+
+    </div>
+    </div>
+  <div class="right-box" style="background-color:green">
+    <div class="child">
+      <div class="label">Release ready</div>
+      <div class="indicator">96</div>
+    </div>
+    </div>
+
+<script>
+</script></body></html>
