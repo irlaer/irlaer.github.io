@@ -57,6 +57,14 @@ body {
   text-align: center;
 }
 
+.line-label {
+  position: absolute;
+  left:10px;
+  top: 10px;
+  font-size: calc(100vmin/25);
+  color: white;
+  z-index:5;
+}
 
 .label {
   font-size: calc(100vmin/27)
@@ -70,6 +78,7 @@ body {
 
 <body>
       <div class="line" id="first">
+        <div class='line-label'>Code Review</div>
         <div class="box" id="1st-waiting">
         <div class="inbox" style="color:#10b110"> <!-- зеленый -->
           <div class="label">Waiting<br>for review</div>
@@ -85,13 +94,13 @@ body {
       <div class="box" id="1st-today-reviews">
         <div class="inbox" style="color:#eec907"> <!-- желтый -->
           <div class="label">Today<br>reviews</div>
-          <div class="indicator">7<span class="label">&#x2714;</span></div>
+          <div class="indicator">7</div>
         </div>
       </div>
             <div class="box" id="1st-today-devs">
         <div class="inbox" style="color:#f43c30">
           <div class="label">Today<br>reviewers</div>
-          <div class="indicator">3<span class="label">&#x1F9D1;</span></div>
+          <div class="indicator">3</div>
         </div>
       </div>
             <div class="last-box" id="2nd-waiting">
@@ -102,7 +111,7 @@ body {
       </div>
     </div>
     <div class="line" id="second">
-  
+      <div class='line-label' style='top:calc(50vh + 10px);'>Release</div>
       <div class="box2" id="since-last-release">
         <div class="inbox" style="color:#10b110"> 
           <div class="label">Since<br>last release</div>
